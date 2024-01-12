@@ -1,0 +1,151 @@
+body {
+    background-color: #DCF2F1;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 60px; /* Adjusted margin-top to accommodate the fixed header */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 90%;
+    padding: 5px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #482D29;
+    z-index: 1000; /* Ensures the header stays on top of other elements */
+}
+
+header .logo {
+    max-width: 3rem;
+}
+
+header .name {
+    font-weight: 700px;
+    text-decoration: none;
+    font-size: 2em;
+    text-shadow: 2px 2px #000000;
+    letter-spacing: 2px;
+    color: #BBB4AC;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    list-style: none;
+    margin-left: 10px;
+}
+
+header ul li a {
+    text-decoration: none;
+    padding: 6px 20px;
+    padding-top: 20px;
+    color: #fff;
+    
+}
+
+header ul li a:hover{
+    background: #fff;
+    opacity: 80%;
+    color: #43766C;
+}
+header ul li a.active {
+    background: #fff;
+    color: #041C32;
+}
+
+ul {
+    list-style-type: none;
+    margin-top: 5px;
+    float: right;
+    overflow: hidden;
+}
+
+li {
+    display: inline-block;
+    padding: 3px 30px;
+}
+
+li a {
+    display: block;
+    color: #dee2e6;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+
+    header {
+        width: 100%;
+        padding: 15px 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed; /* Change to fixed to keep the header fixed */
+    }
+
+    header ul {
+        margin-top: 15px;
+        margin-left: -55px;
+    }
+
+    header ul li a {
+        text-decoration: none;
+        padding: 5px 10px;
+        color: #fff;
+    }
+
+    ul {
+        list-style-type: none;
+        margin-top: 5px;
+        float: left;
+        overflow: hidden;
+    }
+
+    li {
+        display: inline-block;
+        padding: 1px 5px;
+    }
+
+    li a {
+        display: block;
+        color: #dee2e6;
+        text-align: center;
+        padding: 1px 1px;
+        text-decoration: none;
+    }
+
+    header .logo {
+        max-width: 2rem;
+    }
+
+    header .name {
+        font-weight: 600px;
+        text-decoration: none;
+        font-size: 2em;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #78c6a3;
+    }
+
+    #dIcon{
+        display: none;
+    }
+
+    .title-parallax {
+        background-image: none;
+    }
+}
+
+#dIcon{
+    width: 2rem;
+    cursor: pointer;
+}
