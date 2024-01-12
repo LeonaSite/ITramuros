@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="Style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>About</title>
+    <style type="text/css">
+        Body {
+            background-image: url(abg.jpg);
+        }
+
+        .abt {
+            padding-top: -10px;
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        #board {
+            background-color: lightgray;
+            border-bottom: 1px solid black;
+        }
+
+        .lo {
+            display: block;
+            margin-top: 10%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .mem {
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            min-height: 100vh;
+        }
+
+        .img1 {
+            width: 350px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .box {
+            position: relative;
+            width: 400px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px;
+            background: #482D29;
+            transition: transform 1s;
+            cursor: pointer;
+        }
+
+        .area {
+            margin-top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background: #FFFBF5;
+        }
+
+        .box .imgBx {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            box-sizing: border- box;
+        }
+
+        .box .imgBx img h2 {
+            max-width: 100%;
+            opacity: 0.1;
+            transition: 0.5s;
+        }
+
+        .box span {
+            font-size: 20px;
+        }
+
+        p {
+            margin-left: 10%;
+            margin-right: 10%;
+            font-size: 30PX;
+            color: #FFFFEC;
+        }
+
+        h1 {
+            margin-top: 5%;
+            margin-left: 5%;
+            color: #FFFFEC;
+        }
+
+        h2 {
+            color: #FFFFEC;
+        }
+
+        #board {
+            position: absolute;
+            width: 100%;
+            height: 90%;
+            background-color: #f4f4f4;
+            overflow: hidden;
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(255, 255, 255, 255.0.3);
+            /* Black w/ opacity */
+        }
+
+        #dino {
+            position: absolute;
+            bottom: 0;
+            left: 50px;
+            transition: transform 0.1s ease-in-out;
+        }
+
+        .cactus {
+            position: absolute;
+            bottom: 0;
+            width: auto;
+            /* Adjust the width as needed */
+            height: auto;
+            /* Adjust the height as needed */
+        }
+
+        #score {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            font-family: 'Arial', sans-serif;
+            color: #555;
+        }
+
+        .game-over {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+
+        #vid {
+            width: 50%;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+            position: absolute;
+            background-color: #f4f4f4;
+            overflow: hidden;
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+        #myBtn22{
+            display: none;
+        }
+
+        .missing{
+            font-size: 37px;
+        }
+
+        #angel{
+            width: 40%;
+            display: none;
+            z-index: 1;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="Homepage.html" class="name"> <img src="icon.png" class="logo"> ITramuros</a>
+        <ul>
+            <li><a href="Homepage.html">Home</a></li>
+            <li><a href="History.html">History</a></li>
+            <li><a href="Location.html">Location</a></li>
+            <li><a href="About.html" class="active">About Us</a></li>
+        </ul>
+        <!--<img src="dark.png" id="dIcon"> -->
+    </header>
+
+    <div class="abt">
+        <img src="icon.png" width="10%" class="lo">
+        <p>The <strong>ITramuros</strong> is a Website Presentation of Intramuros that features the different
+            establishments that reside in Manila city, Philippines along with its fruitful history. This was made by IT
+            students of STI College of Novaliches and was for educational purposes only.</p>
+
+        <h1>MEMBERS:</h1>
+
+        <div class="mem">
+            <a id="myBtn1">
+                <div class="box" data-aos="fade-up" data-aos-delay="200">
+                    <div class="imgBx"><center>
+                            <img src="Kurt.png" class="img1">
+                            <h2>Kurt Justin Leona<br><span> Leader/ Developer</center>
+                        </span></h2>
+                    </div>
+                </div>
+            </a>
+
+            <a id="myBtn2">
+                <div class="box" data-aos="fade-up" data-aos-delay="200">
+                    <div class="imgBx" id="arv"><center>
+                            <img src="AKRABEN.jpg" class="img1">
+                            <h2>Arvin Francisco<br><span> Content/ Reporter</center>
+                        </span></h2>
+                    </div>
+                </div>
+            </a>
+
+            <a id="myBtn22">
+                <div class="box" data-aos-delay="200">
+                    <div class="imgBx" id="arv"><center>
+                            <img src="AKRA.jpg" class="img1">
+                            <h2 class="missing">MISSING<br><span> you..</center>
+                        </span></h2>
+                    </div>
+                </div>
+            </a>
+
+            <a id="myBtn3">
+                <div class="box" data-aos="fade-up" data-aos-delay="200">
+                    <div class="imgBx"><center>
+                            <img src="Jumamaw.png" class="img1">
+                            <h2>Andrei Jumawan<br><span> Content/ Reporter</center>
+                        </span></h2>
+                    </div>
+                </div>
+            </a>
+
+            <a id="myBtn4">
+                <div class="box" data-aos="fade-up" data-aos-delay="200">
+                    <div class="imgBx"><center>
+                            <img src="ETSAB.png" class="img1">
+                            <h2>Isiah Sebastian Solano <br><span> Content/ Reporter</center>
+                        </span></h2>
+                    </div>
+                </div>
+            </a>
+
+            <img src="angel.png" id="angel">
+
+            <a id="myBtn5">
+                <div class="box" data-aos="fade-up" data-aos-delay="200">
+                    <div class="imgBx"><center>
+                            <img src="Egune.jpg" class="img1">
+                            <h2>Eugene Pantua III<br><span> Content/ Reporter</center>
+                        </span></h2>
+                    </div>
+                </div>
+            </a>
+    </div>
+
+
+        </div>
+    
+    <div id="board">
+        <div id="dino"><img src="Baste.png" alt="Dino"></div>
+        <div id="score">0</div>
+    </div>
+
+    <script>
+        let dino = document.getElementById('dino');
+        let scoreDisplay = document.getElementById('score');
+        let board = document.getElementById('board');
+        let gameOver = true;
+        let score = 0;
+        let jumping = false; // New variable to track jumping state
+
+        document.addEventListener('keydown', startGame);
+
+        function startGame(event) {
+            if (event.code === 'Space' && gameOver) {
+                resetGame();
+                gameLoop();
+                createObstacle(); // Start generating obstacles
+            }
+        }
+
+        function resetGame() {
+            dino.innerHTML = '<img src="Baste.png" alt="Dino">';
+            score = 0;
+            scoreDisplay.textContent = score;
+            gameOver = false;
+        }
+
+        function jump(event) {
+            if (event.code === 'Space' && !gameOver && !jumping) {
+                jumping = true; // Set jumping to true when starting the jump
+                dino.style.transform = 'translateY(-300px)';
+                setTimeout(() => {
+                    dino.style.transform = 'translateY(0)';
+                    jumping = false; // Reset jumping to false when the jump is finished
+                }, 500);
+            }
+        }
+
+        function updateScore() {
+            score++;
+            scoreDisplay.textContent = score;
+        }
+
+        function endGame() {
+            gameOver = true;
+            board.style.display = "none";
+            dino.innerHTML = '<p class="game-over">Game Over</p>';
+        }
+
+        function gameLoop() {
+            if (!gameOver) {
+                updateScore();
+                requestAnimationFrame(gameLoop);
+            }
+        }
+
+        function createObstacle() {
+            setInterval(() => {
+                let obstacle = document.createElement('div');
+                obstacle.classList.add('cactus');
+                obstacle.innerHTML = '<img src="Cactus.png" alt="Cactus">';
+                obstacle.style.left = (board.offsetWidth - 10) + 'px'; // Start from the right side
+                board.appendChild(obstacle);
+
+                moveObstacle(obstacle);
+            }, 2000); // 2000 milliseconds = 2 seconds
+        }
+
+        function moveObstacle(obstacle) {
+            let obstacleInterval = setInterval(() => {
+                let obstacleLeft = parseInt(obstacle.style.left);
+                obstacleLeft -= 5; // Adjust the speed as needed
+
+                obstacle.style.left = obstacleLeft + 'px';
+
+                if (obstacleLeft < -obstacle.offsetWidth) {
+                    obstacle.remove();
+                    clearInterval(obstacleInterval);
+                }
+
+                // Check for collision only if the dino is not in a jumping state
+                if (!jumping &&
+                    dino.offsetLeft < obstacle.offsetLeft + obstacle.offsetWidth &&
+                    dino.offsetLeft + dino.offsetWidth > obstacle.offsetLeft + (obstacle.offsetWidth / 4) &&
+                    dino.offsetTop + dino.offsetHeight > obstacle.offsetTop &&
+                    dino.offsetTop < obstacle.offsetTop + obstacle.offsetHeight
+                ) {
+                    endGame();
+                }
+            }, 5); // 10 milliseconds = 0.01 seconds (adjust as needed)
+        }
+
+        document.addEventListener('keydown', jump);
+    </script>
+
+    <video id="vid" width="400" controls>
+        <source src="saging.mp4" type="video/mp4">
+    </video>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script type="text/javascript">
+        var myboard = document.getElementById("board");
+        var myvid = document.getElementById("vid");
+        var myangel = document.getElementById("angel");
+
+        var btn5 = document.getElementById("myBtn5");
+        var btn4 = document.getElementById("myBtn4");
+        var btn3 = document.getElementById("myBtn3");
+        var btn2 = document.getElementById("myBtn2");
+        var btn22 = document.getElementById("myBtn22");
+
+        btn5.onclick = function () {
+            myangel.style.display = "block";
+            myvid.style.display = "none";
+            document.body.style.backgroundImage = "url('Cathedral.png')";
+        } 
+
+        btn4.onclick = function () {
+            myboard.style.display = "block";
+            myvid.style.display = "none";
+            document.body.style.backgroundImage = "url('Casa.png')";
+        }
+
+        btn3.onclick = function () {
+            myvid.style.display = "block";
+            document.body.style.backgroundImage = "url('Seb.png')";
+        }
+
+        btn22.style.display = "none";
+        btn2.onclick = function () {
+            document.body.style.backgroundImage = "url('Seb.png')";
+            // Toggle visibility of box2
+            btn22.style.display = "block";
+            btn2.style.display = "none";
+            myvid.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
